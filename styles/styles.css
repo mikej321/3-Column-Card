@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  --color1: hsl(31, 77%, 52%);
+  --color2: hsl(184, 100%, 22%);
+  --color3: hsl(179, 100%, 13%);
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+  --neutralmain: hsl(0, 0%, 95%);
+  --paragraph-font: 'Lexend Deca', sans-serif;
+  --heading-font: 'Big Shoulders Display', cursive;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: var(--paragraph-font);
+  font-weight: 400;
+}
+
+.container {
+  color: var(--paragraph);
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "sedan"
+                       "suvs"
+                       "luxury";
+}
+
+.section {
+  padding: 5rem;
+  line-height: 2.1rem;
+}
+
+.section > svg {
+  margin-bottom: 1.4rem;
+}
+
+.section > h1 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3.5rem;
+}
+
+.section > p {
+  line-height: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.section > button {
+  width: 12rem;
+  height: 3.8rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 24px;
+  font-family: var(--paragraph-font);
+  font-weight: 700;
+}
+
+.sedan {
+  border-radius: 6px 6px 0 0;
+}
+
+.sedan > button {
+  color: var(--color1);
+}
+
+.suv > button {
+  color: var(--color2);
+} 
+
+.luxury {
+  border-radius: 0 0 6px 6px;
+}
+
+.luxury > button {
+  color: var(--color3);
+}
+
+.sedan {
+  background-color: var(--color1);
+  grid-area: sedan;
+}
+
+.suv {
+  background-color: var(--color2);
+  grid-area: suvs;
+}
+
+.luxury {
+  background-color: var(--color3);
+  grid-area: luxury;
+}
+
